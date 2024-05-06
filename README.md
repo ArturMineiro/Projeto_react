@@ -1,3 +1,4 @@
-Para rodar corretamente deverá rodas os comandos abaixo :
+Para rodar corretamente deverá rodar os comandos abaixo :
 
 - npm install json-server react-icons react-router-dom uuid
+- npm start

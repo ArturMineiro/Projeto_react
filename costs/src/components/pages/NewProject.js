@@ -1,6 +1,6 @@
 function NewProject(){
     return( <h1>
-        NewProject
+        Novo projeto
     </h1>
     )
 }

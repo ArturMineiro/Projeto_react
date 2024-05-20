@@ -1,35 +1,38 @@
-import {useState, useEffect} from 'react'
-import styles from './Message.module.css'
+import { useState, useEffect } from 'react';
+import { useLocation } from 'react-router-dom';
+import styles from './Message.module.css';
 
+function Message({ type }) {
+    const [visible, setVisible] = useState(false);
+    const [msg, setMsg] = useState(null);
+    const location = useLocation();
 
-function Message({ type, msg }) {
+    useEffect(() => {
+        if (location.state?.message) {
+            setMsg(location.state.message);
+            setVisible(true);
 
-    const [visible,setVisible] =useState(false)
+            const timer = setTimeout(() => {
+                setVisible(false);
+                setMsg(null);
+            }, 3000);
 
-    useEffect(()=>{
-        if(!msg){
-            //retornar se a mensagem existe
-            setVisible(false)
-            return
+            // Limpar o estado após exibir a mensagem
+            window.history.replaceState({}, document.title);
+
+            return () => clearTimeout(timer);
         }
-        //caso exista
-        setVisible(true)
-//tempo para desaparecer mensagem da tela
-        const timer =setTimeout(() => {
-        setVisible(false)
-    },3000 )
+    }, [location.state]);
 
-    return () => clearTimeout(timer)
-    }, [msg] )
-    return (<>
-{visible && (
-        <div className={`${styles.message} ${styles[type]}`}>
-        {msg}
-    </div>
-)}
-    </>
-    
+    return (
+        <>
+            {visible && (
+                <div className={`${styles.message} ${styles[type]}`}>
+                    {msg}
+                </div>
+            )}
+        </>
     );
 }
 
-export default Message
+export default Message;

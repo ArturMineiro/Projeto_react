@@ -87,6 +87,39 @@
       },
       "cost": 0,
       "services": []
+    },
+    {
+      "id": "c31e",
+      "name": "assad",
+      "budget": "12",
+      "category": {
+        "id": "2",
+        "name": "Desenvolvimento"
+      },
+      "cost": 0,
+      "services": []
+    },
+    {
+      "id": "8afd",
+      "name": "dasdsa",
+      "category": {
+        "id": "1",
+        "name": "Infra"
+      },
+      "budget": "2123",
+      "cost": 0,
+      "services": []
+    },
+    {
+      "id": "6cd2",
+      "name": "asdas",
+      "budget": "231",
+      "category": {
+        "id": "1",
+        "name": "Infra"
+      },
+      "cost": 0,
+      "services": []
     }
   ],
   "categories": [

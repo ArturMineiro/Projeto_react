@@ -4,7 +4,7 @@ import {useLocation} from 'react-router-dom'
 
 function Projects(){
 const location = useLocation()
-let message=''
+let message='dasdadsa'
 if(location.state){
     message =location.state.message
 }

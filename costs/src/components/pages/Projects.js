@@ -6,16 +6,19 @@ import Container from "../layont/Container"
 import LinkButton from "../layont/LinkButton"
 import ProjectCard from "../project/ProjectCard"
 import { useState,useEffect } from "react"
-
+import Loading from "../layont/Loading"
 function Projects(){
 
     const [projects,setProjects] = useState([])
     const location = useLocation()
+    const [removeLoading, setRemoveLoading] = useState(false)
+
 let message='Projeto criado com sucesso!!'
 if(location.state){
     message =location.state.message
 }
 useEffect(() => {
+   setTimeout(() => {
     fetch('http://localhost:5000/projects', {
         method: 'GET',
         headers: {
@@ -26,8 +29,10 @@ useEffect(() => {
     .then(data => {
    console.log(data)
         setProjects(data)
+        setRemoveLoading(true)
     })
 .catch((err) => console.log(err))
+   },300)
 },[])
     return( 
     <div className={styles.project_container}>
@@ -41,6 +46,12 @@ useEffect(() => {
 projects.map((project) => (
     <ProjectCard id={project.id} name={project.name} budget={project.budget} category={project.category.name} key={project.id} /> 
 ))}
+{!removeLoading && <Loading/>}
+{removeLoading && projects.length === 0 && (
+    <p> Não há projetos cadastrados !!</p>
+)
+
+}
  </Container>
     </div>
     )

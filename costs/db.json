@@ -30,8 +30,15 @@
         "id": "2",
         "name": "Desenvolvimento"
       },
-      "cost": 0,
-      "services": []
+      "cost": 2222,
+      "services": [
+        {
+          "name": "teste",
+          "cost": "2222",
+          "description": "dadadsa",
+          "id": "d25072cc-5c04-409e-b0df-341f1078f1c1"
+        }
+      ]
     },
     {
       "id": "d685",

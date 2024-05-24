@@ -104,7 +104,7 @@ const lastServiceCost = lastService.cost
 const newCost =parseFloat(project.cost) + parseFloat(lastServiceCost)
 
 if(newCost > parseFloat(project.budget)){
-setMessage('Orçamento ultrapassado,verifique o valor do servioço')
+setMessage('Orçamento ultrapassado,verifique o valor do serviço')
 setType('error')
 project.services.pop()
 return false

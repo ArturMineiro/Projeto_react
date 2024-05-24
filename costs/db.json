@@ -30,13 +30,37 @@
         "id": "2",
         "name": "Desenvolvimento"
       },
-      "cost": 2222,
+      "cost": 57521,
       "services": [
         {
           "name": "teste",
           "cost": "2222",
           "description": "dadadsa",
           "id": "d25072cc-5c04-409e-b0df-341f1078f1c1"
+        },
+        {
+          "name": "dasds",
+          "cost": "231",
+          "description": "dasdsa",
+          "id": "63c42817-b495-4405-9d68-63d490a00ac2"
+        },
+        {
+          "name": "asdasddas",
+          "cost": "12313",
+          "description": "312312",
+          "id": "1631d5ab-d291-4915-9dce-3207c081fb7c"
+        },
+        {
+          "name": "sgdfsd",
+          "cost": "42323",
+          "description": "4",
+          "id": "554b9955-4273-4ad8-8888-c74c6adff9c4"
+        },
+        {
+          "name": "dasdasd",
+          "cost": "432",
+          "description": "2343",
+          "id": "8356127f-2170-49fe-ad9e-9339e37d5a38"
         }
       ]
     },

@@ -19,7 +19,6 @@ function App() {
   return (
     <Router>
       <Navbar/> 
-      <Container customClass="min-height">
       <div>
       
         <Routes>
@@ -31,7 +30,7 @@ function App() {
           <Route path="/project/:id" element={<Project/>} />    
             </Routes>
       </div>
-      </Container>
+
       <Footer/>
     </Router>
   );

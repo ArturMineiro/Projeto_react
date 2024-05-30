@@ -1,0 +1,6 @@
+.container_contact{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  padding: 4em;
+}

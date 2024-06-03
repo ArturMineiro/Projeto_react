@@ -7,7 +7,7 @@ function Contact(){
         <div className={styles.container_contact}>
 
             <h1>Contato</h1>
-            <FormContact /> {/* Use o componente FormContact aqui */}
+            <FormContact /> 
 
     </div>
     )

@@ -5,4 +5,8 @@
   padding: 4em;
   align-items: center;
   text-align: center;
+} 
+
+.container_contact h1{
+  margin-bottom: 30px;
 }
